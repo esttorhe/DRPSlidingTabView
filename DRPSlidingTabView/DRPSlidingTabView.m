@@ -43,6 +43,10 @@
     return self;
 }
 
+- (BOOL)canBecomeFirstResponder {
+   return YES;
+}
+
 - (void)setup {
     self.clipsToBounds = YES;
     self.tabContainer = [[UIView alloc] init];
@@ -54,7 +58,9 @@
     self.contentView.delegate = self;
     self.contentView.showsHorizontalScrollIndicator = NO;
     self.contentView.showsVerticalScrollIndicator = NO;
-    self.contentView.clipsToBounds = NO;
+    self.contentView.clipsToBounds = YES;
+   self.contentView.bounces = NO;
+   self.contentView.canCancelContentTouches = NO;
     
     self.tabContainerBackgroundColor = [UIColor whiteColor];
     
