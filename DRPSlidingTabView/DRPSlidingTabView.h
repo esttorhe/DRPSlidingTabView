@@ -78,6 +78,8 @@
  */
 @property (readonly) CGFloat intrinsicHeight;
 
+@property (readonly) UIView *tabContainer;
+
 /**
  *  @brief The index of the selected page
  */
